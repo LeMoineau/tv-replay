@@ -8,7 +8,7 @@ A l'heure actuelle, TV-Replay peut télécharger des vidéos depuis les sites su
 ## Installation
 
 Pour installer TV-Replay suivez les instructions suivantes:
-- `git clone https://gitlab.insa-rouen.fr/pfaber/tv-replay.git`
+- `git clone https://github.com/LeMoineau/tv-replay.git`
 - ouvrir un terminal dans le repertoire nouvellement créé
 - `pip install bs4 argcomplete tabulate helium PySide6 youtube_dl`
 - `python3 main.py -h`
