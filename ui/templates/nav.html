@@ -1,0 +1,29 @@
+<!-- Nav Header -->
+<div id="nav-header">
+    <img src="{{ url_for('static', filename='assets/images/logoReplayTV.png') }}" alt="logo" class="nav-button-icon">
+    <h1 id="nav-header-button-title" class="nav-button-title">Replay TV</h1>
+</div>
+<!-- Arte -->
+<div class="nav-button">
+    <div class="nav-button-content">
+        <img src="{{ url_for('static', filename='assets/images/arte.png') }}" alt="logo" class="nav-button-icon">
+        <h1 class="nav-button-title">Arte</h1>
+    </div>
+    <div class="nav-button-sublevel">
+        <a class="nav-button-sublevel-link" panel="arte-guide-tv"> Guide TV </a>
+        <a class="nav-button-sublevel-link" state="selected" panel="arte-main" func="crEngine.crawlChannel('arte')"> Navigation </a>
+        <a class="nav-button-sublevel-link" panel="arte-search"> Rechercher </a>
+    </div>
+</div>
+<!-- France TV -->
+<div class="nav-button">
+    <div class="nav-button-content">
+        <img src="{{ url_for('static', filename='assets/images/francetv.png') }}" alt="logo" class="nav-button-icon">
+        <h1 class="nav-button-title">France TV</h1>
+    </div>
+    <div class="nav-button-sublevel">
+        <a class="nav-button-sublevel-link"> Guide TV </a>
+        <a class="nav-button-sublevel-link"> Navigation </a>
+        <a class="nav-button-sublevel-link"> Rechercher </a>
+    </div>
+</div>

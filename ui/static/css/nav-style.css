@@ -1,0 +1,117 @@
+#nav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: var(--nav-width);
+    min-width: var(--nav-width);
+    background-color: var(--nav-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-header {
+    padding: 37px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: var(--nav-padding-left);
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+.nav-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: var(--nav-padding-left);
+    box-sizing: border-box;
+    transform: translate(0);
+}
+
+.nav-button[state="selected"] {
+    background-color: var(--nav-button-bg-hover);
+}
+
+.nav-button[state="selected"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--light-grey);
+}
+
+.nav-button-content {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 56px;
+}
+
+.nav-button-icon {
+    width: var(--nav-icon-size);
+    height: var(--nav-icon-size);
+    margin-right: var(--nav-spacing-between-icon-text);
+}
+
+.nav-button-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--grey);
+    margin: 0;
+}
+
+.nav-button[state="selected"] .nav-button-title {
+    color: var(--light-grey);
+}
+
+#nav-header-button-title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: var(--grey);
+    opacity: 0.7;
+}
+
+.nav-button:hover {
+    background-color: var(--nav-button-bg-hover);
+    cursor: pointer;
+}
+
+.nav-button-sublevel {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-left: calc(var(--nav-icon-size) + var(--nav-spacing-between-icon-text));
+}
+
+.nav-button[state="selected"] .nav-button-sublevel {
+    display: flex;
+}
+
+.nav-button-sublevel-link {
+    margin: 0;
+    padding: 0;
+    height: 32px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2px;
+    color: var(--light-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-button-sublevel-link:hover,
+.nav-button-sublevel-link[state="selected"] {
+    font-weight: 700;
+}
